@@ -1,0 +1,350 @@
+{
+	"info": {
+		"_postman_id": "80ddc567-ebea-470c-90e4-bd5635ea82d2",
+		"name": "Sense Hawk",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Region",
+			"item": [
+				{
+					"name": "Add Region",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bangalore\",\r\n    \"description\": \"Silicon Valley of India\",\r\n    \"location\": {\r\n        \"type\": \"Point\",\r\n        \"coordinates\": [\r\n            12.9716,\r\n            77.5946\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/regions/add",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"regions",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Regions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/regions",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"regions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Region",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"61f152621869c055a5940652\",\r\n    \"name\": \"Bangalore\",\r\n    \"description\": \"Also Known as Silicon Valley of India\",\r\n    \"location\": {\r\n        \"type\": \"Point\",\r\n        \"coordinates\": [\r\n            12.9716,\r\n            77.5946\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/regions/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"regions",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Region",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"61f14cac669dcd46aec39fee\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/regions/delete",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"regions",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Polygon",
+			"item": [
+				{
+					"name": "Add Polygon",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Airport\",\r\n    \"description\": \"Bangalore Airport\",\r\n    \"classId\": 101,\r\n    \"className\": \"airport\",\r\n    \"polygon\": {\r\n        \"type\": \"Polygon\",\r\n        \"coordinates\": [\r\n            [\r\n                [\r\n                    0,\r\n                    0\r\n                ],\r\n                [\r\n                    3,\r\n                    6\r\n                ],\r\n                [\r\n                    6,\r\n                    1\r\n                ],\r\n                [\r\n                    0,\r\n                    0\r\n                ]\r\n            ]\r\n        ]\r\n    },\r\n    \"region\": \"61f164efd824f7b117a8e235\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/polygons/add",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"polygons",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Polygons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/polygons?polygon=[[[0,0],[11,0],[11,11],[0,11],[0,0]]]",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"polygons"
+							],
+							"query": [
+								{
+									"key": "polygon",
+									"value": "[[[0,0],[11,0],[11,11],[0,11],[0,0]]]"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Polygon",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"61f17de552ffe413017c351a\",\r\n    \"name\": \"Airport\",\r\n    \"description\": \"Bangalore Airport\",\r\n    \"classId\": 101,\r\n    \"className\": \"airport\",\r\n    \"polygon\": {\r\n        \"type\": \"Polygon\",\r\n        \"coordinates\": [\r\n            [\r\n                [\r\n                    0,\r\n                    0\r\n                ],\r\n                [\r\n                    4,\r\n                    0\r\n                ],\r\n                [\r\n                    4,\r\n                    4\r\n                ],\r\n                [\r\n                    0,\r\n                    4\r\n                ],\r\n                [\r\n                    0,\r\n                    0\r\n                ]\r\n            ]\r\n        ]\r\n    },\r\n    \"region\": \"61f164efd824f7b117a8e235\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/polygons/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"polygons",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Polygon",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"61f159f26d241aa35d08f099\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/polygons/delete",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"polygons",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Desmond Miles\",\r\n    \"email\": \"desmond.miles@gmail.com\",\r\n    \"password\": \"desmond.miles@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"jehincastic@gmail.com\",\r\n    \"password\": \"jehincastic@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWYxMjU4YjNkNjEzZTUwODkyMGMzMDQiLCJuYW1lIjoiQ2FzdGljIEplaGluIiwiZW1haWwiOiJqZWhpbmNhc3RpY0BnbWFpbC5jb20iLCJpYXQiOjE2NDMyMDI5ODB9.0qrHlNowPEuZ5sJlF_FB7A4yFunGWWPWFkk_d43Xgj0",
+			"type": "string"
+		},
+		{
+			"key": "token_two",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWYxNGJhYTFjMDI1MzRjMTQyZmExMzEiLCJuYW1lIjoiRGVzbW9uZCBNaWxlcyIsImVtYWlsIjoiZGVzbW9uZC5taWxlc0BnbWFpbC5jb20iLCJpYXQiOjE2NDMyMDM0OTh9.P-Caemyy0wgrD00w-pyL0FActwRl-nNNPDQdd47MHoQ",
+			"type": "string"
+		},
+		{
+			"key": "base_url",
+			"value": "http://localhost:4000/api/v1",
+			"type": "string"
+		}
+	]
+}
