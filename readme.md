@@ -21,4 +21,4 @@ foo@bar:~$ npm i (or) yarn
   * The [postman collection][postman] is also included
 
 [env]: https://github.com/jehincastic/sensehawk-geojson/blob/master/.env.example
-[postman]: https://github.com/jehincastic/sensehawk-geojson/blob/master/sample_files/postman_collection.json
+[postman]: https://github.com/jehincastic/sensehawk-geojson/blob/master/postman_collection.json
